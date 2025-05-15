@@ -1,0 +1,201 @@
+{
+  "evaluations": [
+    {
+      "id": 1,
+      "eventId": 1,
+      "musicianId": 1,
+      "promoterId": 4,
+      "rating": 5,
+      "comment": "Todo estuvo muy bien organizado. La prueba de sonido se realizó a tiempo...",
+      "createdAt": "2025-01-05T12:00:00Z"
+    }
+  ],
+  "evaluation_checklist": [
+    { "id": 1, "evaluationId": 1, "label": "Pago puntual",           "value": true  },
+    { "id": 2, "evaluationId": 1, "label": "Buena comunicación",    "value": true  },
+    { "id": 3, "evaluationId": 1, "label": "Rider técnico respetado","value": true  }
+  ],
+  "users": [
+    {
+      "name": "Celeste",
+      "email": "dicabrerabuitron@gmail.com",
+      "password": "1234",
+      "role": "musico",
+      "id": 1
+    },
+    {
+      "name": "Oscar Antayhua",
+      "email": "123@gmail.com",
+      "password": "1234",
+      "role": "musico",
+      "id": 2
+    },
+    {
+      "name": "Mario Torres",
+      "email": "musico@test.com",
+      "password": "123456",
+      "role": "musico",
+      "id": 6
+    },
+    {
+      "name": "Azul",
+      "email": "di36o14oficial@gmail.com",
+      "password": "1234",
+      "role": "musico",
+      "id": 3
+    },
+    {
+      "name": "Rojo",
+      "email": "fabrizioleiva@gmail.com",
+      "password": "1234",
+      "role": "promotor",
+      "id": 4
+    },
+    {
+      "name": "oscar2",
+      "email": "oscar2@gmail.com",
+      "password": "1234",
+      "role": "promotor",
+      "id": 5
+    }
+  ],
+  "events": [
+    {
+      "id": 1,
+      "name": "Rock Night Fest",
+      "date": "2024-12-01",
+      "time": "20:00",
+      "location": "Salón de Eventos Royal",
+      "imageUrl": "https://images.unsplash.com/photo-1540039155733-5bb30b53aa14",
+      "status": "confirmed",
+      "publishDate": "2024-11-02",
+      "soundcheckDate": "2024-12-01",
+      "soundcheckTime": "14:00",
+      "capacity": 5000,
+      "availableTickets": 3000,
+      "adminName": "Rojo",
+      "adminId": 4
+    },
+    {
+      "id": 2,
+      "name": "Jazz Under Stars",
+      "date": "2024-12-17",
+      "time": "19:30",
+      "location": "Central Park, NY",
+      "imageUrl": "https://images.unsplash.com/photo-1415201364774-f6f0bb35f28f",
+      "status": "pending",
+      "publishDate": "2024-11-17",
+      "soundcheckDate": "2024-12-17",
+      "soundcheckTime": "15:00",
+      "capacity": 3000,
+      "availableTickets": 2000,
+      "adminName": "oscar2",
+      "adminId": 5
+    },
+    {
+      "id": 3,
+      "name": "Electro Beats Fest",
+      "date": "2024-12-10",
+      "time": "22:00",
+      "location": "Pier 17, NY",
+      "imageUrl": "https://images.unsplash.com/photo-1470225620780-dba8ba36b745",
+      "status": "pending",
+      "publishDate": "2024-11-10",
+      "soundcheckDate": "2024-12-10",
+      "soundcheckTime": "16:00",
+      "capacity": 4000,
+      "availableTickets": 2500,
+      "adminName": "Rojo",
+      "adminId": 4
+    }
+  ],
+  "event_applicants": [
+    {
+      "id": 1,
+      "userId": 1,
+      "eventId": 1,
+      "status": "accepted",
+      "applicationDate": "2024-03-20T10:00:00Z",
+      "contractSigned": true,
+      "riderUploaded": true
+    },
+    {
+      "id": 2,
+      "userId": 2,
+      "eventId": 2,
+      "status": "accepted",
+      "applicationDate": "2024-03-19T15:00:00Z",
+      "contractSigned": true,
+      "riderUploaded": true
+    },
+    {
+      "id": 3,
+      "userId": 1,
+      "eventId": 3,
+      "status": "pending",
+      "applicationDate": "2024-03-21T09:00:00Z",
+      "contractSigned": false,
+      "riderUploaded": false
+    }
+  ],
+  "payments": [
+    {
+      "id": 1,
+      "amount": 1500.00,
+      "eventId": 1,
+      "musicoId": 1,
+      "promotorId": 4,
+      "status": "HELD",
+      "paymentMethod": "bank_transfer",
+      "bankInfo": {
+        "accountNumber": "****1234",
+        "bankName": "Banco de Crédito",
+        "accountType": "savings"
+      },
+      "description": "Pago por presentación de Celeste en Rock Night Fest",
+      "createdAt": "2024-03-20T10:00:00Z",
+      "updatedAt": "2024-03-20T10:30:00Z",
+      "statusHistory": [
+        {
+          "status": "PENDING",
+          "timestamp": "2024-03-20T10:00:00Z",
+          "comment": "Pago creado"
+        },
+        {
+          "status": "HELD",
+          "timestamp": "2024-03-20T10:30:00Z",
+          "comment": "Pago en espera de confirmación del evento"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "amount": 2000.00,
+      "eventId": 2,
+      "musicoId": 2,
+      "promotorId": 5,
+      "status": "COMPLETED",
+      "paymentMethod": "bank_transfer",
+      "bankInfo": {
+        "accountNumber": "****5678",
+        "bankName": "BBVA",
+        "accountType": "checking"
+      },
+      "description": "Pago por presentación de Oscar Antayhua en Jazz Under Stars",
+      "createdAt": "2024-03-19T15:00:00Z",
+      "updatedAt": "2024-03-19T16:00:00Z",
+      "statusHistory": [
+        {
+          "status": "PENDING",
+          "timestamp": "2024-03-19T15:00:00Z",
+          "comment": "Pago creado"
+        },
+        {
+          "status": "COMPLETED",
+          "timestamp": "2024-03-19T16:00:00Z",
+          "comment": "Transferencia completada exitosamente"
+        }
+      ]
+    }
+  ]
+}
