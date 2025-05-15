@@ -1,25 +1,63 @@
 {
   "evaluations": [
     {
-      "id": 1,
-      "eventId": 1,
-      "musicianId": 1,
-      "promoterId": 4,
+      "eventId": 2,
+      "eventName": "Jazz Under Stars",
+      "eventDate": "2024-12-17",
+      "eventLocation": "Central Park, NY",
+      "eventImageUrl": "https://images.unsplash.com/photo-1415201364774-f6f0bb35f28f",
       "rating": 5,
-      "comment": "Todo estuvo muy bien organizado. La prueba de sonido se realizó a tiempo...",
-      "createdAt": "2025-01-05T12:00:00Z"
+      "comment": "asdsadasd",
+      "suggestions": "dsdasd",
+      "name": "Jazz Under Stars",
+      "date": "2024-12-17",
+      "location": "Central Park, NY",
+      "imageUrl": "https://images.unsplash.com/photo-1415201364774-f6f0bb35f28f",
+      "status": "evaluated",
+      "id": 1
+    },
+    {
+      "eventId": 3,
+      "eventName": "Electro Beats Fest",
+      "eventDate": "2024-12-10",
+      "eventLocation": "Pier 17, NY",
+      "eventImageUrl": "https://images.unsplash.com/photo-1470225620780-dba8ba36b745",
+      "rating": 4,
+      "comment": "dsadasdasdasdsa",
+      "suggestions": "dsadasdasdas",
+      "name": "Electro Beats Fest",
+      "date": "2024-12-10",
+      "location": "Pier 17, NY",
+      "imageUrl": "https://images.unsplash.com/photo-1470225620780-dba8ba36b745",
+      "status": "evaluated",
+      "id": 2
     }
   ],
   "evaluation_checklist": [
-    { "id": 1, "evaluationId": 1, "label": "Pago puntual",           "value": true  },
-    { "id": 2, "evaluationId": 1, "label": "Buena comunicación",    "value": true  },
-    { "id": 3, "evaluationId": 1, "label": "Rider técnico respetado","value": true  }
+    {
+      "id": 1,
+      "evaluationId": 1,
+      "label": "Pago puntual",
+      "value": true
+    },
+    {
+      "id": 2,
+      "evaluationId": 1,
+      "label": "Buena comunicación",
+      "value": true
+    },
+    {
+      "id": 3,
+      "evaluationId": 1,
+      "label": "Rider técnico respetado",
+      "value": true
+    }
   ],
   "users": [
     {
-      "name": "Celeste",
-      "email": "dicabrerabuitron@gmail.com",
-      "password": "1234",
+      "name": "Skyblue",
+      "email": "di@gmail.com",
+      "password": "12333",
       "role": "musico",
       "id": 1
     },
@@ -29,13 +67,6 @@
       "password": "1234",
       "role": "musico",
       "id": 2
-    },
-    {
-      "name": "Mario Torres",
-      "email": "musico@test.com",
-      "password": "123456",
-      "role": "musico",
-      "id": 6
     },
     {
       "name": "Azul",
@@ -99,14 +130,43 @@
       "time": "22:00",
       "location": "Pier 17, NY",
       "imageUrl": "https://images.unsplash.com/photo-1470225620780-dba8ba36b745",
-      "status": "pending",
+      "status": "accepted",
       "publishDate": "2024-11-10",
       "soundcheckDate": "2024-12-10",
       "soundcheckTime": "16:00",
       "capacity": 4000,
       "availableTickets": 2500,
       "adminName": "Rojo",
-      "adminId": 4
+      "adminId": 4,
+      "contract": {
+        "userId": 1,
+        "signature": "firma-digital",
+        "signedDate": "2025-05-15T18:28:52.749Z",
+        "status": "signed"
+      }
+    },
+    {
+      "id": "jazz-night-2024",
+      "name": "Jazz Night Special",
+      "date": "2024-12-15",
+      "time": "21:00",
+      "publishDate": "2024-11-15",
+      "soundcheckDate": "2024-12-15",
+      "soundcheckTime": "16:00",
+      "location": "Blue Note Club",
+      "imageUrl": "https://images.unsplash.com/photo-1415201364774-f6f0bb35f28f",
+      "capacity": 300,
+      "availableTickets": 200,
+      "status": "accepted",
+      "adminName": "John Manager",
+      "adminContact": "+1 234-567-8900",
+      "adminId": 4,
+      "contract": {
+        "userId": 1,
+        "signature": "firma-digital",
+        "signedDate": "2025-05-15T19:27:49.725Z",
+        "status": "signed"
+      }
     }
   ],
   "event_applicants": [
@@ -132,16 +192,25 @@
       "id": 3,
       "userId": 1,
       "eventId": 3,
-      "status": "pending",
+      "status": "accepted",
       "applicationDate": "2024-03-21T09:00:00Z",
-      "contractSigned": false,
+      "contractSigned": true,
+      "riderUploaded": false
+    },
+    {
+      "id": "jazz-night-2024-celeste",
+      "eventId": "jazz-night-2024",
+      "userId": 1,
+      "applicationDate": "2024-11-15T10:00:00.000Z",
+      "status": "accepted",
+      "contractSigned": true,
       "riderUploaded": false
     }
   ],
   "payments": [
     {
       "id": 1,
-      "amount": 1500.00,
+      "amount": 1500,
       "eventId": 1,
       "musicoId": 1,
       "promotorId": 4,
@@ -170,7 +239,7 @@
     },
     {
       "id": 2,
-      "amount": 2000.00,
+      "amount": 2000,
       "eventId": 2,
       "musicoId": 2,
       "promotorId": 5,
