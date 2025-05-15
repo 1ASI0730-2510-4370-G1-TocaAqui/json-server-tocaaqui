@@ -1,6 +1,6 @@
 {
-	"data":{
-	  {
+  "data": {
+    {
   "evaluations": [
     {
       "eventId": 2,
@@ -279,4 +279,5 @@
     }
   ]
 }
+  }
 }
